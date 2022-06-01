@@ -1,0 +1,277 @@
+:root {
+    /* Active state color */
+    --strong-cyan: hsl(172, 67%, 45%);
+
+    /* Neutral color */
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --light-grayish-cyan-1: hsl(189, 41%, 97%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Space Mono', monospace;
+    background: var(--light-grayish-cyan);
+}
+
+input {
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
+
+p {
+    font-size: 24px;
+}
+
+/* REMOVE ARROWS FROM NUMBER INPUT FIELD */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* LOGO */
+.logo-box {
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* MAIN CONTENT */
+.tip-calculator-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.body-sec {
+    padding-bottom: 1.5rem;
+}
+
+/* TOP SECTION AND BOTTOM SECTION PADDING SIDES*/
+.bill-top-section {
+    padding: 0 1.5rem;
+}
+
+.total-price-bottom-section {
+    padding: 0 1rem;
+}
+
+/* TEXT AND INPUT MAIN SECTION */
+.title-input {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+    padding-bottom: .5rem;
+}
+
+.title-output {
+    font-size: .9rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sub-title-output {
+    font-size: 0.7rem;
+    color: var(--dark-grayish-cyan-1);
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-number {
+    background-color: var(--light-grayish-cyan-1);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    font-size: 1.5rem;
+    text-align: end;
+    padding-right: .5rem;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+img.dollar-pic {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+img.person-pic {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.error-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.error-msg {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+    padding-bottom: .5rem;
+    color: rgb(238, 78, 38);
+    opacity: 0;}
+
+.error-msg-on {
+    opacity: 1;
+}
+
+.error-input {
+    border: 1px solid rgb(238, 78, 38);
+}
+
+/* GRID SELECT TIP SECTION */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    grid-template-rows: repeat(3, minmax(45px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--very-dark-cyan);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button Active state */
+.btn-active {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+#custom {
+    text-align: center;
+}
+
+.custom-item {
+    background-color: var(--light-grayish-cyan-1);
+    color: black;
+}
+
+/* OUTPUT SECTION TOTAL PRICE */
+.total-price-body {
+    background: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.total-text-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tip-amount-output,
+.total-amount-output {
+    color: hsl(172, 67%, 45%);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* RESET BUTTON */
+
+button.reset {
+    min-width: 100%;
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* INPUT AND OUTPUT HOVER STYLE */
+.input-number:hover,
+.custom-item:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    outline: none;
+}
+
+.grid-item:hover:not(:last-child) {
+    background-color: hsl(172, 82%, 75%);
+    color: black;
+}
+
+button.reset:hover {
+    background-color: hsl(172, 82%, 75%);
+    opacity: 1;
+}
+
+@media (min-width: 1024px) {
+    .tip-calculator-body {
+        flex-direction: row;
+        margin: 0 auto;
+        min-width: 875px;
+        min-height: 300px;
+        border-radius: 25px;
+        padding: 1.5rem 1rem;
+    }
+
+    /* LEFT/TOP SECTION */
+    .body-sec {
+        padding-bottom: 2rem;
+    }
+
+    .body-sec:last-child {
+        padding-bottom: .5rem;
+    }
+
+    .bill-top-section {
+        flex: 1 1 0;
+        padding: .5rem 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+        grid-template-rows: repeat(2, minmax(45px, 1fr));
+        column-gap: 0.8rem;
+        row-gap: 1rem;
+    }
+
+    /* RIGHT/BOTTOM SECTION */
+    .total-price-bottom-section {
+        flex: 1 1 0;
+        
+    }
+
+    .total-price-body {
+        height: 100%;
+        padding: 3rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .total-text-box:first-child {
+        margin-bottom: 1.5rem;
+    }
+}
