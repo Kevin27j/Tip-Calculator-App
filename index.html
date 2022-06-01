@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- Font Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo-box"><img src="./images/logo.svg" alt="SPLITTER"></div>
+  <div class="tip-calculator-body">
+    <div class="bill-top-section">
+      <div class="bill-input body-sec">
+        <p class="title-input">Bill</p>
+        <div class="input-container">
+          <input name="bill-amount" placeholder="0" class="input-number" id="input-bill">
+          <img src="./images/icon-dollar.svg" alt="" class="dollar-pic">
+        </div>
+      </div>
+      <div class="select-tip-input body-sec">
+        <p class="title-input">Select Tip %</p>
+        <div class="grid">
+          <div class="grid-item tip-btn">5%</div>
+          <div class="grid-item tip-btn">10%</div>
+          <div class="grid-item tip-btn btn-active">15%</div>
+          <div class="grid-item tip-btn">25%</div>
+          <div class="grid-item tip-btn">50%</div>
+          <input class="grid-item custom-item" name="custom" placeholder="Custom" id="custom">
+        </div>
+      </div>
+      <div class="number-people-input body-sec">
+        <div class="error-wrapper">
+          <p class="title-input">Number of People</p>
+          <p class="error-msg">Can't be zero</p>
+        </div>
+        <div class="input-container">
+          <input name="number-of-people" placeholder="1" class="input-number" id="people-input">
+          <img src="./images/icon-person.svg" alt="" class="person-pic">
+        </div>
+      </div>
+    </div>
+
+    <div class="total-price-bottom-section">
+      <div class="total-price-body">
+        <div class="total-text-container">
+          <div class="total-text-box">
+            <div class="total-text">
+              <p class="title-output">Tip Amount</p>
+              <p class="sub-title-output">/ person</p>
+            </div>
+            <div class="tip-amount-output">$0.00</div>
+          </div>
+          <div class="total-text-box">
+            <div class="total-text">
+              <p class="title-output">Total</p>
+              <p class="sub-title-output">/ person</p>
+            </div>
+            <div class="total-amount-output">$0.00</div>
+          </div>
+
+        </div>
+          <button type="button" class="reset">RESET</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Kevin27j" target="_blank">Kejvin Pashaj</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
