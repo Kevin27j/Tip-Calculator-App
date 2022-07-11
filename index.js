@@ -1,4 +1,3 @@
-// USE PSEUDOCODE TO MAKE YOUR OWN ALGORITHM
 
 const bill = document.getElementById("input-bill");
 const tipButton = document.querySelectorAll(".tip-btn");
